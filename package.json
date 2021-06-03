@@ -1,6 +1,6 @@
 {
   "name": "vue-casco",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A hacky solution to a problem that shouldn't exist: adding classes to the body tag",
   "main": "index.js",
   "scripts": {

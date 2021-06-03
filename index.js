@@ -1,32 +1,37 @@
-
-class Util {
-  constructor (options) {
-    this.options = options
+class Casco {
+  constructor (defaults = []) {
+    this.defaults = defaults
+    this.body = document.querySelector('body')
   }
 
-  set(body){
+  set(classes){
+    if(!classes) return false
+    classes = Array.isArray(classes) ? classes : [classes]
+
     this.reset()
 
-    if(!body) return 
-    const classList = body.split(',')
-
-    if(this.options && "body" in this.options) {
-      classList = classList.concat(options.body.split(','))
-    } 
-
-    document.querySelector("body").classList.add(...classList)
+    try {
+      return this.body.classList.add(...classes)
+    } catch(e) {
+      return false
+    }
   }
 
   reset(){
-    document.querySelector("body").classList.remove(...document.body.classList)
+    this.body.classList.remove(...this.body.classList)
+    try{
+      return this.body.classList.add(...this.defaults)
+    } catch (e) {
+      return false
+    }
   }
 }
 
 export default {
-  install: (app, { options }) => {
-    //provide as an injectable socket
-    app.provide('header', new Util(options))
+  install: (app, { defaults }) => {
+    //provide as an injectable class
+    app.provide('casco', new Casco(defaults))
   }
 }
 
-export { Util }
+export { Casco }

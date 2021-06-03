@@ -1,0 +1,25 @@
+{
+  "name": "vue-casco",
+  "version": "0.1.0",
+  "description": "A hacky solution to a problem that shouldn't exist: adding classes to the body tag",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CooperUnion/vue-casco.git"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "body",
+    "hack"
+  ],
+  "author": "Erin Sparling",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CooperUnion/vue-casco/issues"
+  },
+  "homepage": "https://github.com/CooperUnion/vue-casco#readme"
+}

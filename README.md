@@ -1,6 +1,9 @@
 # Vue-Casco
 ## A hacky way of altering the head tag within a Vue 3 project
 
+By [Erin Sparling](https://erinsparling.glitch.me), for [Cooper Union](https://cooper.edu)'s End of the Year Show, 2021
+
+
 # Background
 This project does exactly one thing: helps add classes to the body tag of a Vue 3 project. There is a rich history of projects that do this, like react-helmet, vue-helmet, and even the more modern vue-pseudo-window, but none of them do as little as what we needed, or did it well in a current Vue 3 app. 
 

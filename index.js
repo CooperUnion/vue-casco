@@ -18,6 +18,8 @@ class Casco {
   }
 
   reset(){
+    if(Array.from(this.body.classList) === this.defaults) return this.defaults
+
     this.body.classList.remove(...this.body.classList)
     try{
       return this.body.classList.add(...this.defaults)

@@ -5,10 +5,10 @@ class Casco {
   }
 
   set(classes){
-    if(!classes) return false
-    classes = Array.isArray(classes) ? classes : [classes]
-
     this.reset()
+    if(!classes) return false
+
+    classes = Array.isArray(classes) ? classes : [classes]
 
     try {
       return this.body.classList.add(...classes)
